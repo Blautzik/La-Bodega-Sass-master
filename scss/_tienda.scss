@@ -1,0 +1,22 @@
+.tienda{
+    border-top: 1px solid $colorTexto;
+    padding-top: 3rem;
+    margin-top:1rem;
+    text-align: center;
+}
+
+.tienda h3{
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.tienda__img{
+    width: 90vw;
+    max-width: 900px;
+    height: 25vh;
+    background-image: url(../img/tienda.jpg);
+    background-size: cover;
+    background-position-x: center;
+    margin-bottom:0;
+}

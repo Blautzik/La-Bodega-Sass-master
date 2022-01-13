@@ -1,0 +1,27 @@
+
+.carousel-item img{
+    width: 75vw!important;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-item p{
+    font-family: 'Bodoni Moda';
+}
+
+
+.carousel-item .container .row .col-md-4 h2, h3, h4, span, p{
+    margin-top: .1rem;
+    margin-bottom: .1rem;
+}
+.texto__wrapper{
+    display: flex;
+    justify-content: center;
+}
+.texto__container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width:75vw!important;
+}
+

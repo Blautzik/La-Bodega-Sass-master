@@ -1,0 +1,52 @@
+
+
+.suscripciones{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.suscripciones h3{
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.wrapper{
+    width:75vw;
+}
+
+.suscripciones__container{
+    display: flex;
+    justify-content: center;
+}
+
+.suscripciones__box .box__foto1{
+    background-image: url(../img/coleccion1.jpg);
+    height:50vh;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.suscripciones__box .box__foto2{
+    background-image: url(../img/coleccion2.jpg);
+    height:50vh;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.suscripciones__box .box__foto3{
+    background-image: url(../img/coleccion3.jpg);
+    height:50vh;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.suscripciones__box .box__foto4{
+    background-image: url(../img/coleccion4.jpg);
+    height:50vh;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+.suscripciones__box{
+    text-align: left;
+}

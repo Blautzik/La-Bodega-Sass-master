@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bodega</title>
+        <!-- Define keywords for search engines  -->
+    <meta name="keywords" content="vino, club de vinos, vinos, malbec, cabernet, la mejor tienda de vinos, sommeliers," />
+    <!--     Define a description of your web page -->
+    <meta name="description" content="Un equipo de sommeliers seleccionó los mejores vinos de la argentina para ponerlos a tu alcance al mejor precio del mercado, también podrás encontrar suscripciones mensuales, siempre con envío gratuito en AMBA" />
+
+    <meta name="author" content="Federico Blautzik, blautzik.f@gmail.com">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../scss/style.css">
+
+</head>
+<body>
+
+
+    <header class="container">
+        <div class="row">
+            <div class="header__container col-sm-12">
+                <label for="nav-toggle">
+                    <i class="fas fa-bars hamburguer"></i>
+                </label>
+                <div class="logo">
+                    <a href="#">
+                    <img class="logo" src="../img/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <input type="checkbox" class="nav-toggle invisible" id="nav-toggle">
+                <nav class="hide-for-desktop nav-mobile">
+                    <ul>
+                        <li class="largo"><a href="./html/">Destacado de la Semana</a></li>
+                        <li><a href="./html/suscripcionesMensuales.html">Suscripciones Mensuales</a></li>
+                        <li><a href="./html/tienda.html">Tienda</a></li>
+                        <li><a href="./html/nosotros.html">Nosotros</a></li>
+                    </ul>
+                </nav>
+                <nav class="hide-for-mobile nav-desktop" id="nav-desktop">
+                    <ul>
+                        <li class="largo"><a href="./html/destacadoDeLaSemana.html">Destacado de la Semana</a></li>
+                        <li><a href="./html/suscripcionesMensuales.html">Suscripciones Mensuales</a></li>
+                        <li><a href="./html/tienda.html">Tienda</a></li>
+                        <li><a href="./html/nosotros.html">Nosotros</a></li>
+                    </ul>
+                </nav>
+                <div class="login">
+                
+                    <a href="#exampleModalToggle" role="button" data-bs-toggle="modal"><i class="far fa-user"></i></a>
+                    <a class="link hide-for-mobile" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Entrar / Registrarse</a>                
+                </div>
+            </div>
+        </div>
+    </header> 
+
+
+
+    <!-- login  -->
+
+
+    <section id="login">
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Iniciar sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form action="#"class="login-form">
+                    <label for="username">Email</label>
+                    <input type="email" name="username" id="username" placeholder="Ingresa tu email"> 
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="pass" id="pass" placeholder="*********">
+                    
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Iniciar sesión</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Registrarse</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2">Registrate</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#"class="login-form">
+                        <label for="username">Email</label>
+                        <input type="email" name="username" id="username" placeholder="Ingresa tu email"> 
+                        <label for="confirmauser"> Confirma tu email</label>
+                        <input type="email" name="confirmauser" id="confirmauser" placeholder="Confirma tu email"> 
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass" placeholder="*********">
+                        <label for="confirmapass">Confirma tu contraseña</label>
+                        <input type="password" name="confirmapass" id="confirmapass" placeholder="*********">
+                        <label for="tel">Teléfono</label>
+                        <input type="text" name="tel" id="tel" placeholder="Ingresa tu numero de teléfono">
+
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-dismiss="modal">Registrarse</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- principio del Hero-->
+
+    <div class="destacadoHero">
+        <div class="destacadoHero__box">
+            <p class="box__cita">"Rojo intenso, con matices azulados. En nariz, se presenta frutado, con notas de ciruela, vainilla y anís; mientras, en boca, se reafirman los acentos aciruelados. Los taninos, muy presentes pero amables, destacan su personalidad."</p>
+            <span class="box__autor">Carlos Bilardo, Maestro Sommelier</span>
+        </div>
+    </div>
+
+    <!-- fin del hero -->
+
+    <!-- barra de precio fija -->
+
+    <div class="barraPrecio">
+        <div class="vino__box">
+            <h2>La Mansa Estate, Ego Reserva "Grand Blend" by Familia Iraola</h2>
+            <span>San Rafael, Mendoza, 2018 (750mL)</span>
+        </div>
+        <div class="precio__box">
+            <a href="#"><button class="btn precio__btn">Agregar al carrito | $2700 </button></a>
+            <span>*Envío gratis desde 6 botellas</span>
+        </div>
+    </div>
+
+    <!-- titulo -->
+
+    <section class="titulo">
+        <h4>El destacado de la semana</h4>
+        <h2>La Mansa Estate, Ego Reserva "Grand Blend" by Familia Iraola</h2>
+        <span>San Rafael, Mendoza, 2018 (750mL)</span>
+    </section>
+
+    <!-- caracteristicas del vino -->
+
+    <section class="caracteristicas">
+        <div class="caracteristicas__box">
+            <div class="texo">Cuerpo: </div>
+            <div class="valor"><img src="../img/5.png" alt=""> </div>
+        </div>
+        <div class="caracteristicas__box">
+            <div class="texo">Dulzor: </div>
+            <div class="valor"><img src="../img/4.png" alt=""></div>
+        </div>
+        <div class="caracteristicas__box">
+            <div class="texo">Taninos:</div>
+            <div class="valor"><img src="../img/3-medio.png" alt=""></div>
+            
+        </div>
+        <div class="caracteristicas__box">
+            <div class="texo">Acidez:</div>
+            <div class="valor"><img src="../img/5.png" alt=""></div>
+            
+        </div>
+        <div class="caracteristicas__box">
+            <div class="texo">Alcohol</div>
+            <div class="valor"><img src="../img/3-medio.png" alt=""></div>
+        </div>
+
+    </section>
+
+    <!-- descripcion del vino  -->
+
+    <section class="descripcion">
+        <div class="desc__texto">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam sunt quod officiis ad, natus labore eum, iste minus aut impedit neque voluptas nesciunt molestiae provident dicta quam! Doloremque nisi, amet nesciunt error eius quis ad corporis voluptatem ullam molestiae vitae id vero! Accusantium, voluptatum. Perferendis quidem cum repellat quo explicabo illum cupiditate minus similique ratione quis dolore velit molestiae accusantium, quia aperiam omnis, modi suscipit necessitatibus deleniti. Quibusdam blanditiis a eos ipsam obcaecati ut perferendis corporis esse! Esse, libero nostrum. Perferendis quidem cum repellat quo explicabo illum cupiditate minus similique ratione quis explicabo illum cupiditate minus similique ratione quis dolore velit molestiae accusantium quia aperiam omnis, modi suscipit necessitatibus deleniti. Quibusdam blanditiis a eos ipsam obcaecati ut perferendis corporis esse! Esse, libero nostrum. Perferendis eius quis ad corporis voluptatem ullam molestiae obcaecati ut perferendis corporis esse! Esse,
+            </p>
+        </div>
+
+        <div class="desc__img">
+        </div>
+    
+    </section>
+
+    <!-- ficha tecnica -->
+
+    <section class="tecnica">
+        <div class="ficha__box" id="primera">
+            <div class="box__nombre">
+                <span>Provincia:</span>
+                <span>Región:</span>
+                <span>Terroir:</span>
+                <span>Cultivo:</span>
+            </div>
+
+            <div class="box__valor">
+                <span>Mendoza</span>
+                <span>San Rafael</span>
+                <span>Franco-arenoso</span>
+                <span>Tradicional</span>
+            </div>
+        </div>
+        <div class="ficha__box">
+            <div class="box__nombre">
+                <span>Blend</span>
+                <span>Alcohol</span>
+                <span>Temperatura</span>
+                <span>Copa</span>
+            </div>
+
+            <div class="box__valor">
+                <span>100% Malbec</span>
+                <span>14%</span>
+                <span>15 a 17°c</span>
+                <span>Bordeaux stem</span>
+            </div>
+        </div>    
+
+        <div class="ficha__box">
+            <div class="box__nombre">
+                <span>Guarda</span>
+                <span>Decantado</span>
+            </div>
+
+            <div class="box__valor">
+                <span>5 años</span>
+                <span>20 minutos</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- newsletter -->
+
+    <section class="newsletter grid__newsletter">
+
+        <div class="newsletter__box">
+            <div class="box__texto">
+                <h3>Enterate de todas nuestras ofertas</h3>
+                <p>Recibí en tu mail el destacado de cada semana y todas nuestras ofertas </p>
+            </div>
+            <div class="box__input">
+                <input type="email" name="" id="mail" placeholder="Ingresá tu mail">
+                <input class="btn" type="submit" value="Enviar">
+                <div class="check">
+                    <input type="checkbox" name="acepto" id="acepto"><span>Acepto recibir ofertas y noticias por correo electrónico</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ir a la tienda -->
+
+    <div class="irTienda">
+        <a href="./contacto.html"><button class="btn">Ir a la Tienda</button></a>
+    </div>
+
+    
+    <!-- footer  -->
+ 
+
+
+    <hr>
+
+    <footer id="footerDestacado">
+  
+        <a href="https://youtube.com" target="_blank"><img src="../img/logoyoutube.png" alt="logo-youtube"></a>
+        <a href="https://facebook.com" target="_blank"><img src="../img/logoface.png" alt="logo-facebook"></a>
+        <a href="https://instagram.com" target="_blank"><img src="../img/logoinsta.png" alt="logo-instagram"></a>
+        <a href="https://web.whatsapp.com" target="_blank"><img src="../img/logowhatsapp.png" alt="logo-whatsap"></a>
+        <span>2021 Federico Blautzik</span>
+    </footer>  
+</body>
+</html>

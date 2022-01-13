@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bodega</title>
+        <!-- Define keywords for search engines  -->
+    <meta name="keywords" content="vino, club de vinos, vinos, malbec, cabernet, la mejor tienda de vinos, sommeliers," />
+    <!--     Define a description of your web page -->
+    <meta name="description" content="Un equipo de sommeliers seleccionó los mejores vinos de la argentina para ponerlos a tu alcance al mejor precio del mercado, también podrás encontrar suscripciones mensuales, siempre con envío gratuito en AMBA" />
+
+    <meta name="author" content="Federico Blautzik, blautzik.f@gmail.com">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./scss/style.css">
+
+</head>
+<body>
+
+
+    <header class="container">
+        <div class="row">
+            <div class="header__container col-sm-12">
+                <label for="nav-toggle">
+                    <i class="fas fa-bars hamburguer"></i>
+                </label>
+                <div class="logo">
+                    <a href="#">
+                    <img class="logo" src="./img/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <input type="checkbox" class="nav-toggle invisible" id="nav-toggle">
+                <nav class="hide-for-desktop nav-mobile">
+                    <ul>
+                        <li class="largo"><a href="./html/">Destacado de la Semana</a></li>
+                        <li><a href="./html/suscripcionesMensuales.html">Suscripciones Mensuales</a></li>
+                        <li><a href="./html/tienda.html">Tienda</a></li>
+                        <li><a href="./html/nosotros.html">Nosotros</a></li>
+                    </ul>
+                </nav>
+                <nav class="hide-for-mobile nav-desktop" id="nav-desktop">
+                    <ul>
+                        <li class="largo"><a href="./html/destacadoDeLaSemana.html">Destacado de la Semana</a></li>
+                        <li><a href="./html/suscripcionesMensuales.html">Suscripciones Mensuales</a></li>
+                        <li><a href="./html/tienda.html">Tienda</a></li>
+                        <li><a href="./html/nosotros.html">Nosotros</a></li>
+                    </ul>
+                </nav>
+                <div class="login">
+                
+                    <a href="#exampleModalToggle" role="button" data-bs-toggle="modal"><i class="far fa-user"></i></a>
+                    <a class="link hide-for-mobile" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Entrar / Registrarse</a>                
+                </div>
+            </div>
+        </div>
+    </header> 
+
+
+
+    <!-- login  -->
+
+
+    <section id="login">
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Iniciar sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form action="#"class="login-form">
+                    <label for="username">Email</label>
+                    <input type="email" name="username" id="username" placeholder="Ingresa tu email"> 
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="pass" id="pass" placeholder="*********">
+                    
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Iniciar sesión</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Registrarse</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2">Registrate</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#"class="login-form">
+                        <label for="username">Email</label>
+                        <input type="email" name="username" id="username" placeholder="Ingresa tu email"> 
+                        <label for="confirmauser"> Confirma tu email</label>
+                        <input type="email" name="confirmauser" id="confirmauser" placeholder="Confirma tu email"> 
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass" placeholder="*********">
+                        <label for="confirmapass">Confirma tu contraseña</label>
+                        <input type="password" name="confirmapass" id="confirmapass" placeholder="*********">
+                        <label for="tel">Teléfono</label>
+                        <input type="text" name="tel" id="tel" placeholder="Ingresa tu numero de teléfono">
+
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-dismiss="modal">Registrarse</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Hero  -->
+
+    <section class="container hero__container">
+        <div class="hero row">
+            <div class="hero__img col-sm-12 col-md-6">
+                <img src="./img/herofoto.jpg" alt="">
+            </div>
+            <div class="hero__box col-sm-12 col-md-6 col-lg-6">
+                <p class="box__text">Seleccionados con pasión </p>
+                <h2 class="box__title">Los vinos mas Excepcionales de Argentina hasta la puerta de tu casa</h2>
+                <!-- <a href="./html/suscripcionesMensuales.html"><button class="btn">Registrate!</button></a> -->
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Registrate!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Descripcion -->
+
+
+    <section class="desc">
+        <div class="desc__container">
+            <div class="separador">
+                <img src="./img/logoLB.png" alt="">
+            </div>        
+            <h3 class="desc__title">Somos un equipo de sommeliers, apasionados por descubrir y compartir la historia que hay detrás de cada botella.
+            </h3>
+        </div>
+
+    </section>
+
+
+    <!-- suscripciones  -->
+
+    <section class="suscripciones">
+
+    <div class="wrapper">        
+        <h2>Suscripciones mensuales</h2>
+        <h3>Te ofrecemos cuatro opciones para que puedas conocer, disfrutar y mantenerte bien stockeado del mejor vino!</h3>
+        <!-- <a href="#" class="btn">Leer mas</a> -->
+
+    <div class="suscripciones__container container">
+        <div class="row">   
+        <div class="suscripciones__box col-sm-12 col-md-6 col-lg-3"  id="colePrimera">
+            <div class="box__foto1 foto"></div>
+            <h4>Los 4 fantásticos</h4>
+            <p class="box__texto">Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
+            </p>
+            <button class="btn">Leer mas</button>
+        </div>
+
+        <div class="suscripciones__box col-sm-12 col-md-6 col-lg-3" id="colePrimera">
+            <div class="box__foto2 foto"></div>
+            <h4>Las 6 joyas</h4>
+            <p class="box__texto">Esta selección de 6 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
+            </p>
+            <button class="btn">Leer mas</button>
+        </div>
+        <div class="suscripciones__box col-sm-12 col-md-6 col-lg-3" id="colePrimera">
+            <div class="box__foto3 foto"></div>
+            <h4>Los 6 tintos</h4>
+            <p class="box__texto">Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
+            </p>
+            <button class="btn">Leer mas</button>
+        </div>
+        <div class="suscripciones__box col-sm-12 col-md-6 col-lg-3" id="colePrimera">
+            <div class="box__foto4 foto"></div>
+            <h4>A ciegas</h4>
+            <p class="box__texto">Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
+            </p>
+            <button class="btn">Leer mas</button>
+        </div>
+        </div>
+    </div>    
+    </div> 
+
+    </section>
+
+
+    <!-- tienda  -->
+
+
+    <section class="tienda ">
+            
+        <h2>Tienda de Vinos</h2>
+
+        <h3>Constantemente estamos refinando nuestra seleccion </h3>
+        <div class="tienda__img"></div>
+        <a href="./html/tienda.html"><button class="btn tienda__btn">Explorar la tienda</button></a>
+
+    </section>
+
+    <section class="tienda-slider hide-for-desktop">
+        <div id="carouselExampleControls" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/vinotienda1.jpg" class="d-block w-100" alt="...">
+                <div class="texto__wrapper">
+                <div class="texto__container">
+                    <p>Malbec</p>
+                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                    <div class="preciocomun">
+                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                    </div>
+                    <div class="preciosocios">
+                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                </div>
+                    <a href="#"><button class="btn">Comprar</button></a>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/vinotienda2.jpg" class="d-block w-100" alt="...">
+                <div class="texto__wrapper">
+                <div class="texto__container">
+                    <p>Malbec</p>
+                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                    <div class="preciocomun">
+                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                    </div>
+                    <div class="preciosocios">
+                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                </div>
+                    <a href="#"><button class="btn">Comprar</button></a>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/vinotienda3.jpg" class="d-block w-100" alt="...">
+                <div class="texto__wrapper">
+                <div class="texto__container">
+                    <p>Malbec</p>
+                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                    <div class="preciocomun">
+                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                    </div>
+                    <div class="preciosocios">
+                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                </div>
+                    <a href="#"><button class="btn">Comprar</button></a>
+                </div>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <section class="tienda-slider hide-for-mobile">
+
+
+        <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda1.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda2.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>   
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda3.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda1.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda2.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>   
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda3.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda1.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda2.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>   
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./img/vinotienda3.jpg" class="d-block w-100" alt="...">
+                                <div class="texto__wrapper">
+                                <div class="texto__container">
+                                    <p>Malbec</p>
+                                    <h3>Bodega del Fin del Mundo, "Special Blend"</h3>
+                                    <div class="preciocomun">
+                                        <span class="spanproducto">Precio</span><h4 class="precio">$3.800</h4>
+                                    </div>
+                                    <div class="preciosocios">
+                                    <span class="spanproducto">Precio Socios</span><h4 class="precioSocios">$3.200</h4>
+                                </div>
+                                    <a href="#"><button class="btn">Comprar</button></a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+    </section>
+
+
+
+
+    <!-- destacado  -->
+
+    
+    <section class="destacado">
+
+        <div class="destacado__container container">
+            
+            <h2>Destacado de la semana</h2>
+            <p>Un espacio semanal donde presentamos, con un importante descuento, etiquetas que por su calidad, valor o historia, consideramos que todos los amantes del vino deben probar. </p>
+            <div class="row destacado__centrar">    
+                <div class="destacado__img col-sm-12 col-md-6"></div>
+                <div class="destacado__text col-sm-12 col-md-6">
+                    <h6>Esta semana:</h6>
+                    <span class="nombreVino">La Mansa Estate, Ego Reserva "Grand Blend"</span>
+                    <span class="descVino">San Rafael, Mendoza, 2018 (750mL)</span>
+                    <a href="#" class="link" >Leer mas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- newsletter  -->
+
+    
+    <section class="newsletter">
+
+        <div class="newsletter__box container">
+            <div class="row">
+            <div class="box__texto col-sm-12 col-md-6">
+                <h3>Enterate de todas nuestras ofertas</h3>
+                <p>Recibí en tu mail el destacado de cada semana y todas nuestras ofertas </p>
+            </div>
+            <div class="box__input col-sm-12 col-md-6"">
+                <input type="email" name="" id="mail" placeholder="Ingresá tu mail">
+                <input class="btn box__input" type="submit" value="Enviar">
+                <div class="check">
+                    <input type="checkbox" name="acepto" id="acepto"><span>Acepto recibir ofertas y noticias por Email</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer  -->
+
+    <footer>
+        <a href="https://youtube.com" target="_blank"><img src="./img/logoyoutube.png" alt="logo-youtube"></a>
+        <a href="https://facebook.com" target="_blank"><img src="./img/logoface.png" alt="logo-facebook"></a>
+        <a href="https://instagram.com" target="_blank"><img src="./img/logoinsta.png" alt="logo-instagram"></a>
+        <a href="https://web.whatsapp.com" target="_blank"><img src="./img/logowhatsapp.png" alt="logo-whatsap"></a>
+        <span>2021   Federico Blautzik</span>
+    </footer>   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,30 @@
+
+.separador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.separador img{
+    margin-bottom: 2rem;
+    height: 9rem;
+    opacity: .5;
+    z-index: 9;
+}
+
+.desc{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+    border-bottom: #b4b4b4 1px solid;
+}
+
+.desc__container{
+    width: 69vw;
+}
+.desc h3{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+}

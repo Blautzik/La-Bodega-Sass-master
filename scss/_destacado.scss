@@ -1,0 +1,29 @@
+.destacado__container{
+    text-align: center;
+}
+
+.destacado__container{
+    width:90%;
+}
+.destacado__centrar{
+    display: flex;
+    justify-content: center;
+}
+
+
+.destacado__img{
+    height:35vh;
+    width:90%;
+    margin-left: 1.8rem;
+    background-image: url(../img/destacadocentro.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+
+.destacado__text{
+    width:75vw;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
