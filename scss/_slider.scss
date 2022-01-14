@@ -1,9 +1,4 @@
 
-.carousel-item img{
-    width: 75vw!important;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
 
 .carousel-item p{
     font-family: 'Bodoni Moda';
@@ -18,10 +13,26 @@
     display: flex;
     justify-content: center;
 }
+
+.carousel-item img{
+    width: 75vw!important;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
 .texto__container{
     display: flex;
     flex-direction: column;
     text-align: left;
     width:75vw!important;
+}
+
+@media only screen and (min-width: 766px) {
+
+    .texto__container{
+        width:40vw!important;
+    }
+    .carousel-item img{
+        width: 40vw!important;
+    }
 }
 

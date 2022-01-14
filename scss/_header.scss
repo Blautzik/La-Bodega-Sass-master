@@ -10,11 +10,16 @@ header {
     box-shadow: 10px 0 20px rgba(158, 157, 157, 0.705);
 }
 
+#ancho{
+    max-width: 100vw!important;
+}
+
 .header__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 4rem;
+    
 }
 
 .logo{

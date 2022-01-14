@@ -14,7 +14,7 @@
 }
 
 .wrapper{
-    width:75vw;
+    width:100%;
 }
 
 .suscripciones__container{
@@ -26,27 +26,57 @@
     background-image: url(../img/coleccion1.jpg);
     height:50vh;
     background-size: cover;
+    background-position-x: center;
     margin-bottom: 1rem;
 }
 .suscripciones__box .box__foto2{
     background-image: url(../img/coleccion2.jpg);
     height:50vh;
     background-size: cover;
+    background-position-x: center;
     margin-bottom: 1rem;
 }
 .suscripciones__box .box__foto3{
     background-image: url(../img/coleccion3.jpg);
     height:50vh;
     background-size: cover;
+    background-position-x: center;
     margin-bottom: 1rem;
 }
 .suscripciones__box .box__foto4{
     background-image: url(../img/coleccion4.jpg);
     height:50vh;
     background-size: cover;
+    background-position-x: center;
     margin-bottom: 1rem;
 }
 
 .suscripciones__box{
     text-align: left;
+    margin-bottom: 2rem;
+}
+
+.overfoto{
+    height: 50vh;
+    overflow: hidden;
+
+}
+
+.foto{
+    transition: all 700ms;
+    opacity: 0.5;
+}
+
+.foto:hover{
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+
+
+@media only screen and (min-width: 766px) {
+    .wrapper{
+        width:75vw;
+    }
 }

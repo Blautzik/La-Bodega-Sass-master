@@ -6,13 +6,24 @@ header {
   z-index: 99999;
   width: 100%;
   top: 0;
-  box-shadow: 10px 0 20px rgba(158, 157, 157, 0.705);
+  -webkit-box-shadow: 10px 0 20px rgba(158, 157, 157, 0.705);
+          box-shadow: 10px 0 20px rgba(158, 157, 157, 0.705);
+}
+
+#ancho {
+  max-width: 100vw !important;
 }
 
 .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 4rem;
 }
 
@@ -28,9 +39,14 @@ nav {
   left: 0;
   background: rgba(255, 255, 255, 0.97);
   width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
 nav ul {
@@ -50,15 +66,18 @@ nav a {
   font-size: 1.2rem;
   border-radius: 1px solid rgba(255, 255, 255, 0);
   opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
   transition: opacity 150ms ease-in-out;
 }
 
 .nav-toggle:checked ~ nav {
-  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .nav-toggle:checked ~ nav a {
   opacity: 1;
+  -webkit-transition: opacity 350ms ease-in-out 250ms;
   transition: opacity 350ms ease-in-out 250ms;
 }
 
@@ -73,9 +92,16 @@ nav a {
 
 /* estilos login */
 .login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #login .modal-content label {
@@ -86,7 +112,7 @@ nav a {
   border: none;
   border-bottom: solid 1px slategray;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   margin-top: 1rem;
   width: 75%;
   margin-left: 15%;
@@ -96,117 +122,145 @@ nav a {
   .container {
     max-width: 100vw;
   }
-
   .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     width: 100%;
   }
-
   nav {
-    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
-
   nav a {
     opacity: 1;
   }
-
   #nav-desktop {
     top: 0;
     margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 1rem;
     background: none;
   }
-
   #nav-desktop ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 4rem;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-
   #nav-desktop li {
     margin: 0;
   }
-
   #nav-desktop li a {
     font-size: 1rem;
   }
-
   #nav-desktop li a::after {
-    content: "";
+    content: '';
     display: block;
     height: 1px;
     background: #304d4d;
     margin-left: 1.9rem;
-    transform: scale(0, 1);
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transition: -webkit-transform ease-in-out 150ms;
+    transition: -webkit-transform ease-in-out 150ms;
     transition: transform ease-in-out 150ms;
+    transition: transform ease-in-out 150ms, -webkit-transform ease-in-out 150ms;
   }
-
   #nav-desktop li a:hover::after {
-    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
-
   #nav-desktop li a:hover {
     color: #1f3131;
   }
-
   .link:hover {
     color: #304d4d;
   }
-
   header #nav-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     top: 0;
   }
-
   header #nav-desktop ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
   }
-
   header #nav-desktop ul a {
     text-decoration: none;
     margin-left: 2rem;
     color: #304d4d;
   }
-
   .login {
     color: #304d4d;
     width: 16rem;
   }
-
   header .hamburguer {
     display: none;
   }
 }
+
 .hero__container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
 }
+
 .hero__container .hero {
   margin-top: 2rem;
   width: 100%;
 }
+
 .hero__container .hero img {
   width: 100%;
 }
+
 .hero__container .hero .hero__box {
   margin-top: 1.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .hero__container .hero .hero__box .box__text {
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
+
 .hero__container .hero .hero__box .box__title {
   text-align: center;
-  font-family: "Bodoni Moda";
+  font-family: 'Bodoni Moda';
   font-size: 2rem;
   font-weight: 800;
   font-style: italic;
@@ -217,6 +271,7 @@ nav a {
   padding-top: 3rem;
   margin-top: 1rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .tienda h3 {
@@ -225,20 +280,40 @@ nav a {
   margin: 0 1rem 1rem 1rem;
 }
 
+.tiendaimg_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .tienda__img {
   width: 90vw;
-  max-width: 900px;
-  height: 25vh;
+  max-width: 1000px;
+  height: 42vw;
   background-image: url(../img/tienda.jpg);
   background-size: cover;
   background-position-x: center;
   margin-bottom: 0;
 }
 
+@media only screen and (min-width: 920px) {
+  .tienda__img {
+    width: 65vw;
+    height: 32vw;
+  }
+}
+
 .suscripciones {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 5rem;
 }
 
@@ -249,18 +324,23 @@ nav a {
 }
 
 .wrapper {
-  width: 75vw;
+  width: 100%;
 }
 
 .suscripciones__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .suscripciones__box .box__foto1 {
   background-image: url(../img/coleccion1.jpg);
   height: 50vh;
   background-size: cover;
+  background-position-x: center;
   margin-bottom: 1rem;
 }
 
@@ -268,6 +348,7 @@ nav a {
   background-image: url(../img/coleccion2.jpg);
   height: 50vh;
   background-size: cover;
+  background-position-x: center;
   margin-bottom: 1rem;
 }
 
@@ -275,6 +356,7 @@ nav a {
   background-image: url(../img/coleccion3.jpg);
   height: 50vh;
   background-size: cover;
+  background-position-x: center;
   margin-bottom: 1rem;
 }
 
@@ -282,38 +364,82 @@ nav a {
   background-image: url(../img/coleccion4.jpg);
   height: 50vh;
   background-size: cover;
+  background-position-x: center;
   margin-bottom: 1rem;
 }
 
 .suscripciones__box {
   text-align: left;
+  margin-bottom: 2rem;
+}
+
+.overfoto {
+  height: 50vh;
+  overflow: hidden;
+}
+
+.foto {
+  -webkit-transition: all 700ms;
+  transition: all 700ms;
+  opacity: 0.5;
+}
+
+.foto:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 1;
+}
+
+@media only screen and (min-width: 766px) {
+  .wrapper {
+    width: 75vw;
+  }
+}
+
+.carousel-item p {
+  font-family: 'Bodoni Moda';
+}
+
+.carousel-item .container .row .col-md-4 h2, h3, h4, span, p {
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+}
+
+.texto__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .carousel-item img {
   width: 75vw !important;
   margin-left: 50%;
-  transform: translateX(-50%);
-}
-
-.carousel-item p {
-  font-family: "Bodoni Moda";
-}
-
-.carousel-item .container .row .col-md-4 h2, h3, h4, span, p {
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-}
-
-.texto__wrapper {
-  display: flex;
-  justify-content: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .texto__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: left;
   width: 75vw !important;
+}
+
+@media only screen and (min-width: 766px) {
+  .texto__container {
+    width: 40vw !important;
+  }
+  .carousel-item img {
+    width: 40vw !important;
+  }
 }
 
 .destacado__container {
@@ -325,8 +451,12 @@ nav a {
 }
 
 .destacado__centrar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .destacado__img {
@@ -340,38 +470,77 @@ nav a {
 
 .destacado__text {
   width: 75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: left;
 }
 
 .newsletter {
-  margin-top: 3rem;
   padding: 2rem 0.5rem;
   background-color: #f3f0f0;
+}
+
+.newsletter__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .box__input {
   margin-top: 0;
 }
 
+#mail {
+  top: 2rem;
+}
+
+@media only screen and (min-width: 766px) {
+  #mail {
+    width: 26vw;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  #mail {
+    width: 26vw;
+  }
+}
+
 .separador {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 3rem;
 }
 
 .separador img {
   margin-bottom: 2rem;
   height: 9rem;
-  opacity: 0.5;
+  opacity: .5;
   z-index: 9;
 }
 
 .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 2.5rem;
   border-bottom: #b4b4b4 1px solid;
 }
@@ -396,33 +565,195 @@ footer img {
 }
 
 /* hero   */
-.destacadoHero {
-  top: 0rem;
-  height: 80vh;
+.destacadoHero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.destacadoHero__img {
+  height: 35vh;
+  width: 90%;
   margin: 0 2rem;
-  background-image: url(../img/destacado.jpg);
+  margin-top: 2rem;
+  background-image: url(../img/destacadocentro.jpg);
   background-size: cover;
+  background-position-x: center;
 }
 
 .destacadoHero__box {
-  width: 49%;
+  width: 90%;
   color: #221f2a;
-  margin-left: 45vw;
 }
 
 .box__cita {
-  padding-top: 18rem;
-  margin-bottom: 0.6rem;
-  font-family: "Bodoni Moda";
-  font-size: 1.6rem;
+  font-family: 'Bodoni Moda';
+  font-size: 1.2rem;
   font-style: italic;
+  margin: 0 .5rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .box__autor {
   color: #6c5c97;
+  float: right;
+}
+
+/* titulo */
+.titulo {
+  margin-top: 2rem;
+  width: 80vw;
+  text-align: center;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.titulo h4 {
+  font-weight: 200;
+}
+
+.descripcion {
+  width: 82vw;
+  margin-left: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.descripcion .desc__texto {
+  width: 90vw;
+  text-align: center;
+  margin-right: 5vw;
+  font-size: 1rem !important;
+  margin-top: 2rem;
+}
+
+.descripcion .desc__img {
+  width: 90vw;
+  height: 45vw;
+  margin-top: 1rem;
+  background-image: url(../img/destacadozoom.jpg);
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 73%;
+  vertical-align: top;
+}
+
+/* ficha tecnica */
+.tecnica {
+  width: 80vw;
+  margin-left: 10vw;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: rgba(126, 126, 126, 0.5);
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-bottom: 1rem;
+  border-bottom: rgba(126, 126, 126, 0.5);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ficha__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#primera {
+  margin-left: 0px;
+}
+
+.ficha__box .box__nombre span {
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.ficha__box .box__valor {
+  text-align: right;
+  margin-right: 0;
+}
+
+.ficha__box .box__valor span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: .5rem;
 }
 
 /* barra precio */
+.barraPrecio .vino__box {
+  width: 45vw;
+  margin-top: 0;
+}
+
+.barraPrecio .vino__box h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-family: 'Bodoni Moda';
+}
+
+.barraPrecio .vino__box span {
+  color: #7e7e7e;
+}
+
+.barraPrecio .precio__box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.barraPrecio .precio__box .precio__btn {
+  font-size: 1.1rem;
+  margin-top: 1.7rem;
+  margin-right: 2rem;
+}
+
+.barraPrecio .precio__box span {
+  margin-top: .2rem;
+  color: #7e7e7e;
+}
+
 .barraPrecio {
   position: fixed;
   bottom: 0;
@@ -431,50 +762,195 @@ footer img {
   border-top: rgba(126, 126, 126, 0.5);
   border-top-width: 1px;
   border-top-style: solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.barraPrecio .vino__box {
-  display: inline-block;
-  width: 45vw;
-  margin-left: 11rem;
+@media only screen and (min-width: 766px) {
+  .descripcion {
+    width: 82vw;
+    margin-left: 10vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .descripcion .desc__texto {
+    width: 50vw;
+    margin-right: 5vw;
+    font-size: 1rem !important;
+    margin-top: 2rem;
+    text-align: left;
+  }
+  .descripcion .desc__img {
+    width: 25vw;
+    margin-top: 1rem;
+    background-image: url(../img/destacadozoom.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    vertical-align: top;
+  }
+  .ficha__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+  }
+  .tecnica {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
-.barraPrecio .vino__box h2 {
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
-}
-
-.barraPrecio .precio__box {
-  margin-right: 11rem;
-  float: right;
-}
-
-.barraPrecio .precio__box .precio__btn {
-  display: block;
-  font-size: 1.5rem;
-  margin-top: 1.7rem;
-}
-
-.barraPrecio .precio__box span {
-  margin-top: 0.2rem;
-  padding-left: 7rem;
+@media only screen and (min-width: 920px) {
+  .destacadoHero__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    background-image: url(../img/destacado.jpg);
+    background-size: cover;
+    height: 90vh;
+  }
+  .destacadoHero__img {
+    top: 0rem;
+    height: 60vw;
+    width: 45%;
+    margin: 0 2rem;
+    background-image: none;
+  }
+  .destacadoHero__box {
+    width: 49%;
+    color: #221f2a;
+    margin-left: 10vw;
+    margin-right: 5rem;
+  }
+  .box__cita {
+    margin-bottom: .6rem;
+    font-family: 'Bodoni Moda';
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: left;
+  }
+  .box__autor {
+    color: #6c5c97;
+    float: left;
+    margin-left: .5rem;
+  }
+  /* titulo */
+  .titulo {
+    margin-top: 2rem;
+    width: 40vw;
+    text-align: center;
+    margin-left: 30vw;
+  }
+  .titulo h4 {
+    font-weight: 200;
+  }
+  .descripcion {
+    width: 82vw;
+    margin-left: 10vw;
+  }
+  .descripcion .desc__texto {
+    display: inline-block;
+    width: 50vw;
+    margin-right: 5vw;
+    font-size: 1.2rem !important;
+    margin-top: 2rem;
+  }
+  .descripcion .desc__img {
+    display: inline-block;
+    width: 25vw;
+    height: 45vh;
+    margin-top: 1rem;
+    background-image: url(../img/destacadozoom.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    vertical-align: top;
+  }
+  .ficha__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 25%;
+  }
+  .barraPrecio {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    border-top: rgba(126, 126, 126, 0.5);
+    border-top-width: 1px;
+    border-top-style: solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .barraPrecio .vino__box {
+    width: 45vw;
+    margin-top: 0;
+    margin-left: 5%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .barraPrecio .vino__box h2 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+  .barraPrecio .precio__box .precio__btn {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 1.7rem;
+    margin-right: 2rem;
+  }
+  .barraPrecio .precio__box span {
+    margin-top: .2rem;
+  }
 }
 
 /* header no fijo */
 .noFijo {
   position: relative;
-}
-
-/* titulo */
-.titulo {
-  margin-top: 2rem;
-  width: 40vw;
-  text-align: center;
-  margin-left: 30vw;
-}
-
-.titulo h4 {
-  font-weight: 200;
 }
 
 /* caracteristicas */
@@ -501,76 +977,9 @@ footer img {
 }
 
 /* descripcion */
-.descripcion {
-  width: 82vw;
-  margin-left: 10vw;
-}
-
-.descripcion .desc__texto {
-  display: inline-block;
-  width: 50vw;
-  margin-right: 5vw;
-  font-size: 1.5rem;
-  margin-top: 2rem;
-}
-
-.descripcion .desc__img {
-  display: inline-block;
-  width: 25vw;
-  height: 45vh;
-  margin-top: 1rem;
-  background-image: url(../img/destacadozoom.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  vertical-align: top;
-}
-
 /* ficha tecnica */
-.tecnica {
-  width: 80vw;
-  margin-left: 10vw;
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: rgba(126, 126, 126, 0.5);
-  border-top-width: 1px;
-  border-top-style: solid;
-  padding-bottom: 1rem;
-  border-bottom: rgba(126, 126, 126, 0.5);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-}
-
-.ficha__box {
-  display: inline-block;
-  width: auto;
-  margin-left: 9vw;
-}
-
-#primera {
-  margin-left: 0px;
-}
-
-.ficha__box .box__nombre {
-  display: inline-block;
-}
-
-.ficha__box .box__nombre span {
-  display: block;
-  margin-right: 7rem;
-  margin-bottom: 0.5rem;
-}
-
-.ficha__box .box__valor {
-  display: inline-block;
-  text-align: right;
-  margin-right: 0;
-}
-
-.ficha__box .box__valor span {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+#footerDestacado {
+  margin-bottom: 10rem;
 }
 
 /* Google fonts  */
@@ -584,13 +993,13 @@ footer img {
 }
 
 /* estilo de botones */
-.btn_secundario, .btn {
+.btn, .btn_secundario {
   margin-top: 1.5rem;
-  padding: 0.5rem 2rem;
+  padding: .5rem 2rem;
   background-color: #5b2d61;
   border-style: none;
   border-radius: 10px;
-  font-size: 0.98rem;
+  font-size: .98rem;
   font-weight: 100;
   color: #f3f0f0;
   cursor: pointer;
@@ -601,18 +1010,27 @@ footer img {
   color: #f3f0f0;
 }
 
+.btn:hover {
+  background-color: #3f0c46;
+  color: white;
+}
+
 .btn_secundario {
   background-color: #f3f0f0;
   color: #5b2d61;
 }
 
-.btn:hover {
-  background-color: #3f0c46;
+.noTopMarg {
+  margin-top: 0;
 }
 
 .suscHero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .suscHero__img {
@@ -629,8 +1047,13 @@ footer img {
 }
 
 .searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 5%;
   margin-top: 6.5rem;
 }
@@ -650,8 +1073,8 @@ footer img {
 }
 
 .producto__box h2, h3, h4, span, p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .producto__box h3 {
@@ -665,77 +1088,75 @@ footer img {
     max-width: 100vw;
   }
 }
+
 @media only screen and (min-width: 920px) {
   .searchBar {
     margin-top: 6rem;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 70%;
     margin-left: 29%;
   }
-
   .hide-for-mobile {
     position: relative;
     visibility: visible;
     margin-top: 5rem;
   }
-
   .hide-for-desktop {
     visibility: hidden;
     position: absolute;
   }
-
   /* index imagen tienda desktop  */
-  .tienda__img {
-    height: 28rem;
-    width: 75vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-
   .destacado__img {
     width: 35%;
   }
-
   .destacado__text {
     width: 35%;
   }
-
   .destacado__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .destacado__container p {
     width: 65%;
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
-
   .destacado {
-    margin-top: 8rem;
+    margin-top: 11rem;
   }
-
   .carousel-item {
     width: 80vw !important;
     margin-left: 10%;
   }
-
   .carousel-item img {
     width: 18vw !important;
   }
-
   .carousel-indicators {
-    top: 100vh;
-    margin-bottom: 7rem;
+    top: 72vh;
   }
-
   .hide-for-mobile .col-md-4 {
     width: 18vw;
   }
-
   .hide-for-mobile .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

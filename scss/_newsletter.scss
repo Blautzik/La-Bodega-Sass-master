@@ -1,7 +1,11 @@
 .newsletter{
-    margin-top: 3rem;
     padding:2rem 0.5rem;
     background-color: $colorPrincipal;
+}
+
+.newsletter__box{
+    display: flex;
+    align-items: center;
 }
 
 
@@ -9,3 +13,21 @@
     margin-top: 0;
 }
 
+
+
+#mail{
+    top:2rem;
+
+}
+
+@media only screen and (min-width: 766px) {
+    #mail{
+        width:26vw;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    #mail{
+        width:26vw;
+    }
+}

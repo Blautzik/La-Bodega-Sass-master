@@ -1,33 +1,169 @@
 
 /* hero   */
 
-.destacadoHero{
-    top: 0rem;
-    height: 80vh;
-    margin: 0 2rem;
-    background-image: url(../img/destacado.jpg);
-    background-size: cover;
+.destacadoHero__container{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.destacadoHero__img{
+    height: 35vh;
+    width:90%;
+    margin: 0 2rem;
+    margin-top: 2rem;
+    background-image: url(../img/destacadocentro.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
 
 .destacadoHero__box{
-    width:49%;
+    width:90%;
     color:rgb(34, 31, 42);
-    margin-left: 45vw;
+
 }
 
+
 .box__cita{
-    padding-top: 18rem;
-    margin-bottom: .6rem;
     font-family: 'Bodoni Moda';
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-style: italic;
+    margin: 0 .5rem;
+    margin-top: 1rem;
+    text-align: center
 }
 
 .box__autor{
     color: rgb(108, 92, 151);
+    float:right;
 }
 
+
+/* titulo */
+
+.titulo{
+    margin-top: 2rem;
+    width:80vw;
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.titulo h4{
+    font-weight: 200;
+
+}
+
+.descripcion{
+    width:82vw;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.descripcion .desc__texto{
+    width: 90vw;
+    text-align: center;
+    margin-right: 5vw;
+    font-size: 1rem!important;
+    margin-top: 2rem;
+}
+
+.descripcion .desc__img{
+    width: 90vw;
+    height:45vw;
+    margin-top: 1rem;
+    background-image: url(../img/destacadozoom.jpg);
+    background-size: 180%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 73%;
+    vertical-align: top;
+}
+
+
+/* ficha tecnica */
+
+.tecnica{
+    width:80vw;
+    margin-left:10vw;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: rgba(126, 126, 126, 0.5);
+    border-top-width: 1px;
+    border-top-style: solid;
+    padding-bottom: 1rem;
+    border-bottom: rgba(126, 126, 126, 0.5);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    display:flex;
+    flex-direction: column;
+}
+
+.ficha__box{
+    display: flex;
+    justify-content: space-between;
+}
+#primera{
+    margin-left: 0px;
+}
+
+.ficha__box .box__nombre span{
+    margin-bottom: .5rem;
+    display: block;
+
+}
+.ficha__box .box__valor{
+
+    text-align: right;
+    margin-right: 0;
+}
+.ficha__box .box__valor span{
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+
 /* barra precio */
+
+
+.barraPrecio .vino__box{
+    width:45vw;
+    margin-top: 0;
+}
+
+.barraPrecio .vino__box h2{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-family: 'Bodoni Moda';
+}
+
+.barraPrecio .vino__box span{
+    color:rgb(126, 126, 126);
+}
+
+.barraPrecio .precio__box{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.barraPrecio .precio__box .precio__btn{
+    font-size: 1.1rem;
+    margin-top: 1.7rem;
+    margin-right: 2rem;
+}
+
+.barraPrecio .precio__box span{
+    margin-top: .2rem;
+    color:rgb(126, 126, 126)
+}
 
 .barraPrecio{
     position: fixed;
@@ -37,33 +173,180 @@
     border-top: rgba(126, 126, 126, 0.5);
     border-top-width: 1px;
     border-top-style: solid;
+    display: flex;
+    justify-content: space-between;
 }
 
-.barraPrecio .vino__box{
-    display: inline-block;
-    width:45vw;
-    margin-left: 11rem;
+
+@media only screen and (min-width : 766px){
+    .descripcion{
+        width:82vw;
+        margin-left: 10vw;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .descripcion .desc__texto{
+        width: 50vw;
+        margin-right: 5vw;
+        font-size: 1rem!important;
+        margin-top: 2rem;
+        text-align: left;
+    }
+    
+    .descripcion .desc__img{
+        width: 25vw;
+        margin-top: 1rem;
+        background-image: url(../img/destacadozoom.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        vertical-align: top;
+    
+    }
+    
+    .ficha__box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:40%;
+    }
+
+    .tecnica{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    
+
 }
 
-.barraPrecio .vino__box h2{
-    font-size: 1.8rem;
-    margin-top: 1.5rem;
-}
 
-.barraPrecio .precio__box{
-    margin-right: 11rem;
-    float: right;
-}
+@media only screen and (min-width : 920px){
+    .destacadoHero__container{
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        background-image: url(../img/destacado.jpg);
+        background-size: cover;
+        height:90vh;
+    }
+    
+    .destacadoHero__img{
+        top: 0rem;
+        height: 60vw;
+        width:45%;
+        margin: 0 2rem;
+        background-image: none;
+    }
+    
+    .destacadoHero__box{
+        width:49%;
+        color:rgb(34, 31, 42);
+        margin-left: 10vw;
+        margin-right: 5rem;
+    }
+    
 
-.barraPrecio .precio__box .precio__btn{
-    display: block;
-    font-size: 1.5rem;
-    margin-top: 1.7rem;
-}
+    .box__cita{
+        margin-bottom: .6rem;
+        font-family: 'Bodoni Moda';
+        font-size: 1.6rem;
+        font-style: italic;
+        text-align: left;
+    }
+    
+    .box__autor{
+        color: rgb(108, 92, 151);
+        float: left;
+        margin-left: .5rem;
+    }
+    /* titulo */
 
-.barraPrecio .precio__box span{
-    margin-top: .2rem;
-    padding-left: 7rem;
+    .titulo{
+    margin-top: 2rem;
+    width:40vw;
+    text-align: center;
+    margin-left: 30vw;
+    }
+
+    .titulo h4{
+    font-weight: 200;
+
+    }
+
+    .descripcion{
+        width:82vw;
+        margin-left: 10vw;
+    }
+    
+    .descripcion .desc__texto{
+        display: inline-block;
+        width: 50vw;
+        margin-right: 5vw;
+        font-size: 1.2rem!important;
+        margin-top: 2rem;
+    }
+    
+    .descripcion .desc__img{
+        display: inline-block;
+        width: 25vw;
+        height: 45vh;
+        margin-top: 1rem;
+        background-image: url(../img/destacadozoom.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        vertical-align: top;
+    
+    }
+    
+        
+    .ficha__box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:25%;
+    }
+
+    .barraPrecio{
+        position: fixed;
+        bottom: 0;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        border-top: rgba(126, 126, 126, 0.5);
+        border-top-width: 1px;
+        border-top-style: solid;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .barraPrecio .vino__box{
+        width:45vw;
+        margin-top: 0;
+        margin-left: 5%;
+        justify-content: space-around;
+    }
+    
+    .barraPrecio .vino__box h2{
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    
+    .barraPrecio .precio__box .precio__btn{
+        display: block;
+        font-size: 1.5rem;
+        margin-top: 1.7rem;
+        margin-right: 2rem;
+    }
+    
+    .barraPrecio .precio__box span{
+        margin-top: .2rem;
+    }
+    
 }
 
 /* header no fijo */
@@ -72,19 +355,7 @@
     position: relative;
 }
 
-/* titulo */
 
-.titulo{
-    margin-top: 2rem;
-    width:40vw;
-    text-align: center;
-    margin-left: 30vw;
-}
-
-.titulo h4{
-    font-weight: 200;
-
-}
 
 /* caracteristicas */
 
@@ -113,73 +384,10 @@
 
 /* descripcion */
 
-.descripcion{
-    width:82vw;
-    margin-left: 10vw;
-}
-
-.descripcion .desc__texto{
-    display: inline-block;
-    width: 50vw;
-    margin-right: 5vw;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
-.descripcion .desc__img{
-    display: inline-block;
-    width: 25vw;
-    height: 45vh;
-    margin-top: 1rem;
-    background-image: url(../img/destacadozoom.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    vertical-align: top;
-
-}
 
 /* ficha tecnica */
 
-.tecnica{
-    width:80vw;
-    margin-left:10vw;
-    margin-top: 3rem;
-    padding-top: 1rem;
-    border-top: rgba(126, 126, 126, 0.5);
-    border-top-width: 1px;
-    border-top-style: solid;
-    padding-bottom: 1rem;
-    border-bottom: rgba(126, 126, 126, 0.5);
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-}
 
-.ficha__box{
-    display: inline-block;
-    width: auto;
-    margin-left: 9vw;    
-}
-#primera{
-    margin-left: 0px;
-}
-
-.ficha__box .box__nombre{
-    display:inline-block;
-}
-.ficha__box .box__nombre span{
-    display:block;
-    margin-right: 7rem;
-    margin-bottom: .5rem;
-
-}
-.ficha__box .box__valor{
-    display:inline-block;
-    text-align: right;
-    margin-right: 0;
-}
-.ficha__box .box__valor span{
-    display:block;
-    font-weight: bold;
-    margin-bottom: .5rem;
+#footerDestacado{
+    margin-bottom: 10rem;
 }
