@@ -1,0 +1,254 @@
+.mainGrid{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.tienda__grid{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+
+
+.searchBar{
+    display: flex;
+    flex-direction: column;
+}
+.input__flex{
+    display: flex;
+    margin: 0 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchBar input{
+    max-width: 75vw;
+    margin-top: 1rem;
+    padding:0;
+    border:none;
+    border-bottom:rgb(34, 31, 42) 1px solid;
+}
+.searchBar .ordenar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    font-size: .7rem;
+}
+
+.searchBar img{
+    display: inline-block;
+    height: 2rem;
+    position: relative;
+    line-height: 2rem;
+    padding-top: .5rem;
+    margin-right: 1rem;
+}
+
+.searchBar .ordenar span{
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+.filtros{
+    display:none;
+}
+
+.filtros__mobile{
+    display: flex;
+    margin: 1rem;
+}
+
+.filtros__mobile span{
+    margin-right: 2rem;
+}
+
+.tienda__flex{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto__box{
+    max-width: 85vw;
+    margin-bottom: 3rem;
+}
+
+.producto__box h3{
+    text-align: left;
+}
+
+.producto__box img{
+    max-width: 85vw;
+}
+
+.producto__box .preciocomun h4{
+    font-size: 1.5rem;
+}
+
+.producto__box .preciosocios h4{
+    font-size: 1.8rem;
+    color: cornflowerblue;
+}
+
+
+
+
+@media only screen and (min-width : 480px) {
+
+    .searchBar{
+        margin-left: 3rem;
+    }
+
+    .filtros__mobile{
+        margin-left: 4rem;
+    }
+    .tienda__flex{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .search__flex{
+        max-width: 50vw;
+    }
+
+    .producto__box{
+        max-width: 40vw;
+    }
+    .producto__box img{
+        max-width: 40vw;
+    }
+
+}
+
+
+@media only screen and (min-width : 769px) {
+    .containerTienda{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    
+    .filtros{
+        display: inline-block;
+        width:20vw;
+        padding-left: 10vw;
+        vertical-align: top;
+        margin-top: 5rem;
+    }
+    .tienda{
+        width:75vw;
+    }
+
+
+    .search__flex{
+        display:flex;
+        flex-direction: row;
+
+        justify-content: space-around;
+    }
+    .search__flex input{
+        max-width: 20vw;
+    }
+
+    .tienda{
+        background-color: rgba(221, 221, 221, 0.385);
+    }
+
+    .producto__box button{
+        margin-left: 0;
+
+    }
+    
+
+    .filtros__mobile{
+        display:none;
+    }
+    .searchBar .ordenar span {
+        width:7rem;
+    }
+
+    .footer__grid{
+        grid-area: footer_grid;
+    }
+
+}    
+
+
+@media only screen and (min-width : 780px) {
+.searchBar input{
+    border:none;
+    border-bottom:rgb(34, 31, 42) 1px solid;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+}
+.searchBar{
+    margin-left: 0;
+}
+
+.searchBar img{
+    display: inline-block;
+    height: 2rem;
+    position: relative;
+    line-height: 2rem;
+    padding-top: .5rem;
+}
+.searchBar .ordenar span{
+    width:auto;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+
+
+.filtros ul span{
+    display:block;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.filtros ul{
+    margin-bottom: 5rem;
+}
+
+.tienda{
+    display: inline-block;
+    width: 70vw;
+    margin-left: 5vw;
+    transition: all 600ms;
+}
+
+.tienda .producto__box{
+    display: inline-block;
+    width: 15vw;
+    margin: 3vh 2vw;
+    overflow:hidden;
+}
+
+.tienda .producto__box img{
+    width: 15vw;
+    transition: all 600ms;
+}
+
+.tienda .producto__box h4{
+    float: right;
+}
+
+.tienda .producto__box .spanproducto{
+    display: inline-block;
+}
+
+.preciosocios h4{
+    font-size: 1.5rem;
+    color: rgb(112, 26, 112);
+}
+.preciosocios span{
+    font-size: 1rem;
+}
+
+
+.tienda .producto__box img:hover{
+    transform: scale(1.1);
+}    
+}
+
+

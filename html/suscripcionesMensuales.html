@@ -5,24 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>suscripciones Mensuales</title>
-    <link rel="stylesheet" href="../estilos/style.css">
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../scss/style.css">
+
+
 </head>
+
+
+
 <body>
-    <header>
+    <header class="container" id="ancho">
+        <div class="row">
+            <div class="header__container col-sm-12">
+                <label for="nav-toggle">
+                    <i class="fas fa-bars hamburguer"></i>
+                </label>
+                <div class="logo">
+                    <a href="../index.html">
+                    <img class="logo" src="../img/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <input type="checkbox" class="nav-toggle invisible" id="nav-toggle">
+                <nav class="hide-for-desktop nav-mobile">
+                    <ul>
+                        <li class="largo"><a href="./destacadoDeLaSemana.html">Destacado de la Semana</a></li>
+                        <li><a href="./suscripcionesMensuales.html">Suscripciones Mensuales</a></li>
+                        <li><a href="./tienda.html">Tienda</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                    </ul>
+                </nav>
+                <nav class="hide-for-mobile nav-desktop" id="nav-desktop">
+                    <ul>
+                        <li class="largo"><a href="./destacadoDeLaSemana.html">Destacado de la Semana</a></li>
+                        <li><a href="./suscripcionesMensuales.html">Suscripciones Mensuales</a></li>
+                        <li><a href="./tienda.html">Tienda</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                    </ul>
+                </nav>
+                <div class="login">
+                
+                    <a href="#exampleModalToggle" role="button" data-bs-toggle="modal"><i class="far fa-user"></i></a>
+                    <a class="link hide-for-mobile" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Entrar / Registrarse</a>                
+                </div>
+            </div>
+        </div>
+    </header> 
 
-        <nav>
-            <a href="../index.html">
-                <img class="logo" src="../img/logo.png" alt="logo" />
-            </a>
-            <ul>
-                <li><a href="../html/destacadoDeLaSemana.html">Destacado de la Semana</a></li>
-                <li><a href="../html/suscripcionesMensuales.html">Suscripciones Mensuales</a></li>
-                <li><a href="../html/tienda.html">Tienda</a></li>
-                <li><a href="../html/nosotros.html">Nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
+    
 
+
+    <!-- login  -->
+
+
+    <section id="login">
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Iniciar sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form action="#"class="login-form">
+                    <label for="username">Email</label>
+                    <input type="email" name="username" id="username" placeholder="Ingresa tu email"> 
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="pass" id="pass" placeholder="*********">
+                    
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Iniciar sesión</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Registrarse</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2">Registrate</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#"class="login-form">
+                        <label for="username">Email</label>
+                        <input type="email" name="username" id="username" placeholder="Ingresa tu email"> 
+                        <label for="confirmauser"> Confirma tu email</label>
+                        <input type="email" name="confirmauser" id="confirmauser" placeholder="Confirma tu email"> 
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass" placeholder="*********">
+                        <label for="confirmapass">Confirma tu contraseña</label>
+                        <input type="password" name="confirmapass" id="confirmapass" placeholder="*********">
+                        <label for="tel">Teléfono</label>
+                        <input type="text" name="tel" id="tel" placeholder="Ingresa tu numero de teléfono">
+
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-dismiss="modal">Registrarse</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </section>
 
     <!-- hero  -->
     
@@ -42,40 +134,54 @@
 
     <!-- colecciones  -->
 
-    <section class="colecciones">
 
-        <div class="colecciones__box" id="colePrimera">
-            <div> <img src="../img/coleccion1.jpg" alt=""></div>
-            <h3>Los 4 fantásticos</h3>
-            <p>Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
+    </section>
+    <div class="suscripciones__container container">
+        <div class="row">   
+        <div class="suscripciones__box col-sm-12 col-md-6 col-lg-3"  id="colePrimera">
+            <div class="overfoto">
+                <div class="box__foto1 foto"></div>
+            </div>
+            <h4>Los 4 fantásticos</h4>
+            <p class="box__texto">Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
             </p>
-            <span>$3000</span>
-            <button class="btn">suscribirse</button>
+            <p class="precio">$3000</p>
+            <button class="btn btn-primary">suscribirse</button>
         </div>
-        <div class="colecciones__box">
-            <div> <img src="../img/coleccion2.jpg" alt=""></div>
-            <h3>Las 6 joyas</h3>
-            <p>Esta selección de 6 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
+
+        <div class="suscripciones__box col-sm-12 col-md-6 col-lg-3" id="colePrimera">
+            <div class="overfoto">
+                <div class="box__foto2 foto"></div>
+            </div>
+            <h4>Las 6 joyas</h4>
+            <p class="box__texto">Esta selección de 6 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
             </p>
-            <span>$3000</span>
-            <button class="btn">suscribirse</button>
+            <p class="precio">$3000</p>
+            <button class="btn btn-primary">suscribirse</button>
         </div>
-        <div class="colecciones__box">
-            <div> <img src="../img/coleccion3.jpg" alt=""></div>
-            <h3>Los 6 tintos</h3>
-            <p>Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
+        <div class="suscripciones__box col-sm-12 col-md-6 col-lg-3" id="colePrimera">
+            <div class="overfoto">
+                <div class="box__foto3 foto"></div>
+            </div>
+            <h4>Los 6 tintos</h4>
+            <p class="box__texto">Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
             </p>
-            <span>$3000</span>
-            <button class="btn">suscribirse</button>
+            <p class="precio">$3000</p>
+            <button class="btn btn-primary">suscribirse</button>
         </div>
-        <div class="colecciones__box">
-            <div> <img src="../img/coleccion4.jpg" alt=""></div>
-            <h3>A ciegas</h3>
-            <p>Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
+        <div class="suscripciones__box col-sm-12 col-md-6 col-lg-3" id="colePrimera">
+            <div class="overfoto">
+                <div class="box__foto4 foto"></div>
+            </div>
+            <h4>A ciegas</h4>
+            <p class="box__texto">Esta selección de 4 etiquetas unidas por una misma temática, es un excelente punto de partida para ingresar en el mundo del vino. Ideal para aquellos que quieren aumentar sus conocimientos como tambien para los que quieran disfrutar y compratir el buen vino.
             </p>
-            <span>$3000</span>
-            <button class="btn">suscribirse</button>
+            <p class="precio">$3000</p>
+            <button class="btn btn-primary">suscribirse</button>
         </div>
+        </div>
+    </div>    
+    </div> 
 
     </section>
 
@@ -87,5 +193,9 @@
         <a href="https://web.whatsapp.com" target="_blank"><img src="../img/logowhatsapp.png" alt="logo-whatsap"></a>
         <span>2021 Federico Blautzik</span>
     </footer>  
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
