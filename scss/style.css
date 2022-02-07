@@ -32,9 +32,14 @@ nav {
   left: 0;
   background: rgba(255, 255, 255, 0.97);
   width: 100%;
+  height: 100vh;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+}
+
+nav .loguito {
+  height: 5rem;
 }
 
 nav ul {
@@ -44,14 +49,16 @@ nav ul {
 }
 
 nav li {
-  margin-bottom: 1em;
+  margin-bottom: 0.1em;
   margin-left: 1em;
 }
 
 nav a {
-  color: #304d4d;
+  color: #4a5f5f;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-family: "Canela Condensed";
+  margin: 0.1rem 0;
   border-radius: 1px solid rgba(255, 255, 255, 0);
   opacity: 0;
   transition: opacity 150ms ease-in-out;
@@ -67,7 +74,7 @@ nav a {
 }
 
 .link {
-  color: #304d4d;
+  color: #4a5f5f;
   text-decoration: none;
 }
 
@@ -122,6 +129,8 @@ nav a {
     display: flex;
     font-size: 1rem;
     background: none;
+    height: auto;
+    max-width: 60vw;
   }
 
   #nav-desktop ul {
@@ -143,7 +152,7 @@ nav a {
     content: "";
     display: block;
     height: 1px;
-    background: #304d4d;
+    background: #4a5f5f;
     margin-left: 1.9rem;
     transform: scale(0, 1);
     transition: transform ease-in-out 150ms;
@@ -158,12 +167,13 @@ nav a {
   }
 
   .link:hover {
-    color: #304d4d;
+    color: #4a5f5f;
   }
 
   header #nav-desktop {
     display: flex;
     top: 0;
+    justify-content: space-evenly;
   }
 
   header #nav-desktop ul {
@@ -174,11 +184,12 @@ nav a {
   header #nav-desktop ul a {
     text-decoration: none;
     margin-left: 2rem;
-    color: #304d4d;
+    color: #4a5f5f;
+    font-size: 1.5rem;
   }
 
   .login {
-    color: #304d4d;
+    color: #4a5f5f;
     width: 16rem;
   }
 
@@ -190,7 +201,9 @@ nav a {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin: 0;
+  padding: 0;
+  margin-top: 2rem;
 }
 .hero__container .hero {
   margin-top: 2rem;
@@ -207,25 +220,32 @@ nav a {
   justify-content: center;
 }
 .hero__container .hero .hero__box .box__text {
-  font-family: "Poppins";
+  font-family: "Canela Text";
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 .hero__container .hero .hero__box .box__title {
   text-align: center;
-  font-family: "Bodoni Moda";
-  font-size: 2rem;
-  font-weight: 800;
-  font-style: italic;
+  font-family: "Canela Condensed";
+  font-size: 2.4rem;
+  padding: 0 0.5rem;
 }
 
-.tienda {
-  border-top: 1px solid #304d4d;
+.hero__img {
+  margin: 0;
+  padding: 0;
+}
+
+.tiendaind {
+  border-top: 1px solid #4a5f5f;
   padding-top: 3rem;
   margin-top: 1rem;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.tienda h3 {
+.tiendaind h3 {
+  font-family: "Canela";
   font-size: 1rem;
   font-weight: 200;
   margin: 0 1rem 1rem 1rem;
@@ -896,17 +916,23 @@ h2 {
   font-size: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: darkslategray;
+}
+
 .filtros {
   display: none;
 }
 
 .filtros__mobile {
   display: flex;
-  margin: 1rem;
+  margin: 5%;
 }
 
 .filtros__mobile span {
   margin-right: 2rem;
+  margin-left: 1rem;
 }
 
 .tienda__flex {
@@ -922,6 +948,7 @@ h2 {
 
 .producto__box h3 {
   text-align: left;
+  font-family: "Canela";
 }
 
 .producto__box img {
@@ -940,10 +967,6 @@ h2 {
 @media only screen and (min-width: 480px) {
   .searchBar {
     margin-left: 3rem;
-  }
-
-  .filtros__mobile {
-    margin-left: 4rem;
   }
 
   .tienda__flex {
@@ -1046,6 +1069,12 @@ h2 {
 
   .filtros ul {
     margin-bottom: 5rem;
+    list-style: none;
+  }
+
+  a {
+    color: darkslategray;
+    text-decoration: none;
   }
 
   .tienda {
@@ -1075,9 +1104,16 @@ h2 {
     display: inline-block;
   }
 
+  .preciosocios {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .preciosocios h4 {
     font-size: 1.5rem;
     color: #701a70;
+    display: inline-block;
   }
 
   .preciosocios span {
@@ -1138,6 +1174,24 @@ h2 {
 }
 
 /* Google fonts  */
+@font-face {
+  font-family: "Canela";
+  src: url("../fuentes/Canela-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Canela Condensed";
+  src: url("../fuentes/Canela Condensed Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Canela Text";
+  src: url("../fuentes/Canela Text Thin.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -1207,6 +1261,7 @@ h2 {
 .hide-for-mobile {
   position: absolute;
   visibility: hidden;
+  transform: translateY(-1228px);
 }
 
 /* tienda estilos productos  */
@@ -1246,6 +1301,7 @@ h2 {
     position: relative;
     visibility: visible;
     margin-top: 5rem;
+    transform: translateY(0px);
   }
 
   .hide-for-desktop {

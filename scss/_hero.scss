@@ -3,7 +3,9 @@
     width:100%;
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin:0;
+    padding:0;
+    margin-top: 2rem;
     & .hero{
         margin-top: 2rem;;
         width:100%;
@@ -17,17 +19,23 @@
             align-items: center;
             justify-content: center;
             & .box__text{
-                font-family: 'Poppins';
+                font-family: 'Canela Text';
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
             }
             & .box__title{
                 text-align: center;
-                font-family: 'Bodoni Moda';
-                font-size: 2rem;
-                font-weight: 800;
-                font-style: italic;
+                font-family: 'Canela Condensed';
+                font-size: 2.4rem;
+                padding: 0 .5rem;
             }
         }
     }
+}
+
+.hero__img{
+    margin:0;
+    padding:0;
 }
 
 

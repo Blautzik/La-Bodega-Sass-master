@@ -49,17 +49,23 @@
     font-size: 1rem;
 }
 
+a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
 .filtros{
     display:none;
 }
 
 .filtros__mobile{
     display: flex;
-    margin: 1rem;
+    margin: 5%;
 }
 
 .filtros__mobile span{
     margin-right: 2rem;
+    margin-left: 1rem;
 }
 
 .tienda__flex{
@@ -75,6 +81,7 @@
 
 .producto__box h3{
     text-align: left;
+    font-family: 'Canela';
 }
 
 .producto__box img{
@@ -99,9 +106,7 @@
         margin-left: 3rem;
     }
 
-    .filtros__mobile{
-        margin-left: 4rem;
-    }
+
     .tienda__flex{
         flex-direction: row;
         flex-wrap: wrap;
@@ -208,6 +213,12 @@
 
 .filtros ul{
     margin-bottom: 5rem;
+    list-style: none;
+}
+
+a{
+    color: darkslategray;
+    text-decoration: none;
 }
 
 .tienda{
@@ -237,9 +248,16 @@
     display: inline-block;
 }
 
+.preciosocios{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .preciosocios h4{
     font-size: 1.5rem;
     color: rgb(112, 26, 112);
+    display: inline-block;
 }
 .preciosocios span{
     font-size: 1rem;
